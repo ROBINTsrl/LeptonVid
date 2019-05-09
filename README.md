@@ -9,9 +9,9 @@ As suggested by Luke Van Horn in his project [2] is better to increase SPI devic
 References:
 
 Usefult repositories with __Lepton 3__ module software (running on __Raspberry Pi__)
-[1] https://github.com/novacoast/Lepton-3-Module 
-[2] https://github.com/lukevanhorn/Lepton3 
+1. https://github.com/novacoast/Lepton-3-Module 
+2. https://github.com/lukevanhorn/Lepton3 
 
 
 Official __FLIR Lepton 3__ support resource page
-https://www.flir.com/support/products/lepton#Resources
+- https://www.flir.com/support/products/lepton#Resources

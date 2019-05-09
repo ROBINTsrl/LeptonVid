@@ -1,7 +1,9 @@
 # LeptonVid
 ### FLIR Lepton 3 SPI / GPIO streaming console application
 
-This program is a very simple tool to retrieve frames/pictures from __FLIR Lepton 3__ modules and print them on standard output. The are many tools like this over there but I found many of them to have very big frame syncronization issues that I've not been able to fix.
+This program is a very simple tool to retrieve frames/pictures from __FLIR Lepton 3__ modules and print them on standard output. 
+
+There are many tools like this over there but I found many of them to have very big frame syncronization issues that I've not been able to fix.
 
 This application was written for use on __RaspberryPi 0 W__ boards connecting the __Lepton 3 Module__ (with an adapter board) trough _SPI_ port. To achieve the maximum performances and avoid synchronization issues I'm using an extra _GPIO_ pin on which I received an interrupt signal from the __Lepton 3__ module itself (see chapter [4.2.3.3.3 Frame Synchronization](https://www.flir.com/globalassets/imported-assets/document/flir-lepton-engineering-datasheet.pdf)).
 

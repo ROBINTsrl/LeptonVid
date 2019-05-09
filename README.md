@@ -41,7 +41,7 @@ __gpio pin__: using this option to change the __Raspebbery Pi__ pin used to inpu
 
 ### Wirings
 
-As mentioned above this program requires __Raspberry Pi__ board to be connected to __Lepton module__ trough _SPI_ bus. Please refer to official __Raspberry Pi__ and __FLIR Lepton Module__ pinout before proceed on wiring (or support board vendor). Please note also that two more connection are required to get the full features these are:
+As mentioned above this program requires __Raspberry Pi__ board to be connected to __Lepton module__ trough _SPI_ bus. Please refer to official __Raspberry Pi__ and __FLIR Lepton Module__ (or/and support board vendor) pinout before proceed on wiring. Please note also that two more connection are required to get the full features these are:
 - I2C bus
 - VSYNC connection
 

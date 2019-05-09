@@ -9,6 +9,29 @@ This application was written for use on __RaspberryPi 0 W__ boards connecting th
 
 As suggested by Luke van Horn in [his project](https://github.com/lukevanhorn/Lepton3) is better to increase SPI device buffer size to increase overall performances (on __RPi0W__ boards)) adding `spidev.buffer=131072` to `/boot/cmdline.txt`
 
+### Usage
+
+Once compiled the tool act as a typical _Unix_ console application; typing `LeptonVid -?` will print out the usage:
+```
+[-f frames] 
+[-F frames timeout] 
+[-D startup delay] 
+[-p port] 
+[-s bitrate] 
+[-i strip frame delimiters] 
+[-r reset Lepton on startup]
+```
+
+__frames__: is the number of frames the application will wait from module, please note that only valid frames are taken into account. Omitting this option will cause LeptonVid to run forever until interrupted.
+
+__frames timeout__: allows to specify the timeout time in microseconds of the ioctl read function (default value is 65535).
+
+__startup delay__: time to wait before interacting with camera module in seconds. Please note that official documentation states that the internal module initialization and calibration procedure will take not less than 5 seconds (default value is set to 5 seconds).
+
+__port__: allows to specify which device to use (default value is `/dev/spidev0.0`).
+
+__bitrate__: SPI bus port bitrate in _Hz_ (default value is set to 16000000Hz)
+
 ### References
 
 Usefult repositories with __Lepton 3__ module software (running on __Raspberry Pi__):

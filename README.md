@@ -37,7 +37,7 @@ __strip frame delimiters__: when specified this option remove frame delimiters (
 
 __reset on startup__: using this option will force __Lepton module__ to be reset on application startup.
 
-__gpio pin__: using this option to specifiy/change the __Raspebbery Pi__ Pin used to input the _VSYNC_ signal coming from __Lepton module__ please note that we are using [WiringPi pin enumeration standard](http://wiringpi.com/) (default value is set to 6)
+__gpio pin__: using this option to specifiy/change the __Raspebbery Pi__ pin used to input the _VSYNC_ signal coming from __Lepton module__ please note that we are using [WiringPi](http://wiringpi.com/)  pin enumeration standard (default value is set to 6)
 
 ### References
 

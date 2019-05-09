@@ -41,11 +41,11 @@ __gpio pin__: using this option to change the __Raspebbery Pi__ pin used to inpu
 
 ### Wirings
 
-As mentioned above this program requires __Raspberry Pi__ board to be connected to __Lepton module__ trough _SPI_ bus. Please refer to official __Raspberry Pi__ and __FLIR Lepton Module__ (or/and support board vendor) pinout before proceed on wiring. Please note also that two more connection are required to get the full features these are:
+As mentioned above this program requires __Raspberry Pi__ board to be connected to __Lepton module__ trough _SPI_ bus. Please refer to official __Raspberry Pi__ and __FLIR Lepton Module__ (or/and support board vendor) pinout before proceed on wiring. Please note also that two more connections are required to get the application working these are:
 - I2C bus
 - VSYNC connection
 
-I2C bus connection is required to enable commands to be issued to __Lepton Module__. VSYNC connection is needed to enter __Lepton module__ VSYNC output into one of __Raspberry Pi__ GPIO pin without this connection the frame synchronization will be impossibile and the application will fail. The default __Raspberry Pi__ pin expected to be connected is pin 22 (pin 6 in [WiringPi](https://pinout.xyz/pinout/wiringpi) sequence). 
+I2C bus connection is required to enable commands to be issued to __Lepton Module__. VSYNC connection is needed to enter __Lepton module__ VSYNC output into one of __Raspberry Pi__ GPIO pin without this connection the frame synchronization will be impossibile and the application will fail. The default __Raspberry Pi__ pin expected to be connected is pin 22 (pin 6 in [WiringPi](https://pinout.xyz/pinout/wiringpi) sequence). Where to pick the VSYNC output on Lepton module depends on supporto board manifacturer. On official __FLIR__ support board this output is an exposed pad labeled __GPIO3__ placed on the back side of the board itself (yes you have to solder a wire on it).
 
 ### References
 

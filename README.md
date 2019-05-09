@@ -13,6 +13,10 @@ Usefult repositories with __Lepton 3__ module software (running on __Raspberry P
 1. https://github.com/novacoast/Lepton-3-Module 
 2. https://github.com/lukevanhorn/Lepton3 
 
+Groupgets campaigns:
+https://groupgets.com/manufacturers/flir/products/lepton-3-0
+https://groupgets.com/manufacturers/flir/products/lepton-3-5
 
-Official __FLIR Lepton 3__ support resource page:
+Official __FLIR Lepton 3__ support pages:
 3. https://www.flir.com/support/products/lepton#Resources
+4. https://lepton.flir.com/sdk/

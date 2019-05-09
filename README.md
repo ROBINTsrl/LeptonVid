@@ -20,21 +20,24 @@ Once compiled the tool act as a typical _Unix_ console application; typing `Lept
 [-s bitrate] 
 [-i strip frame delimiters] 
 [-r reset Lepton on startup]
+[-w gpio pin]
 ```
 
 __frames__: is the number of frames the application will wait from module, please note that only valid frames are taken into account. Omitting this option will cause LeptonVid to run forever until interrupted.
 
-__frames timeout__: allows to specify the timeout time in microseconds of the ioctl read function (default value is 65535).
+__frames timeout__: allows to specify the timeout time in microseconds of the ioctl read function (default value is 65535 microseconds).
 
 __startup delay__: time to wait before interacting with camera module in seconds. Please note that official documentation states that the internal module initialization and calibration procedure will take not less than 5 seconds (default value is set to 5 seconds).
 
 __port__: allows to specify which device to use (default value is `/dev/spidev0.0`).
 
-__bitrate__: SPI bus port bitrate in _Hz_ (default value is set to 16MHz)
+__bitrate__: SPI bus port bitrate in _Hz_ (default value is set to 16MHz).
 
-__strip frame delimiters__: when specified this option remove frame delimiters (i.e. `F`, `EF` tags printed before and after the frame body) 
+__strip frame delimiters__: when specified this option remove frame delimiters (i.e. `F`, `EF` tags printed before and after the frame body).
 
-__reset on startup__: force a module reset on application startup
+__reset on startup__: using this option will force __Lepton module__ to be reset on application startup.
+
+__gpio pin__: using this option to specifiy/change the __Raspebbery Pi__ Pin used to input the _VSYNC_ signal coming from __Lepton module__ please note that we are using [WiringPi pin enumeration standard](http://wiringpi.com/) (default value is set to 6)
 
 ### References
 

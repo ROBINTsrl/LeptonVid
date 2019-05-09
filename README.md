@@ -5,13 +5,13 @@ This program is a very simple tool to retrieve frames/pictures from __FLIR Lepto
 
 There are many tools like this over there but I found many of them to have very big frame syncronization issues that I've not been able to fix.
 
-This application was written for use on __RaspberryPi 0 W__ boards connecting the __Lepton 3 Module__ (with an adapter board) trough _SPI_ port. To achieve the maximum performances and avoid synchronization issues I'm using an extra _GPIO_ pin on which I received an interrupt signal from the __Lepton 3__ module itself (see chapter [4.2.3.3.3 Frame Synchronization](https://www.flir.com/globalassets/imported-assets/document/flir-lepton-engineering-datasheet.pdf)).
+This application was written for use on __RaspberryPi 0 W__ boards connecting the __Lepton 3 Module__ (with an adapter board) trough _SPI_ port. To achieve the maximum performances and avoid synchronization issues I'm using an extra _GPIO_ pin on which I received a VSYNC interrupt signal from the __Lepton 3__ module itself (see chapter [4.2.3.3.3 Frame Synchronization](https://www.flir.com/globalassets/imported-assets/document/flir-lepton-engineering-datasheet.pdf)).
 
-As suggested by Luke van Horn in [his project](https://github.com/lukevanhorn/Lepton3) is better to increase SPI device buffer size to increase overall performances (on __RPi0W__ boards)) adding `spidev.buffer=131072` to `/boot/cmdline.txt`
+As suggested by __Luke van Horn__ in [his project](https://github.com/lukevanhorn/Lepton3) is better to increase SPI device buffer size to increase overall performances (on __RPi0W__ boards)) adding `spidev.buffer=131072` to `/boot/cmdline.txt`
 
 ### Usage
 
-Once compiled the tool act as a typical _Unix_ console application; typing `LeptonVid -?` will print out the usage:
+Once compiled the tool act as a typical _Unix_ console application; typing `LeptonVid -?` will print out the usage as follows:
 ```
 [-f frames] 
 [-F frames timeout] 
@@ -37,7 +37,13 @@ __strip frame delimiters__: when specified this option remove frame delimiters (
 
 __reset on startup__: using this option will force __Lepton module__ to be reset on application startup.
 
-__gpio pin__: using this option to specifiy/change the __Raspebbery Pi__ pin used to input the _VSYNC_ signal coming from __Lepton module__ please note that we are using [WiringPi](http://wiringpi.com/)  pin enumeration standard (default value is set to 6)
+__gpio pin__: using this option to specifiy/change the __Raspebbery Pi__ pin used to input the _VSYNC_ signal coming from __Lepton module__. Please note that we are using [WiringPi](http://wiringpi.com/) pin enumeration standard sequence (default value is set to 6)
+
+### Wirings
+
+As mentioned above this program requires __Raspberry Pi__ board to be connected to __Lepton module__ trough _SPI_ bus. Please refer to official __Raspberry Pi__ and __FLIR Lepton Module__ pinout before proceed on wiring (or support board vendor). Please note also that two more connection are required to get the full features these are:
+- I2C bus
+- VSYNC input
 
 ### References
 

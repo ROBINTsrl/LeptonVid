@@ -30,7 +30,11 @@ __startup delay__: time to wait before interacting with camera module in seconds
 
 __port__: allows to specify which device to use (default value is `/dev/spidev0.0`).
 
-__bitrate__: SPI bus port bitrate in _Hz_ (default value is set to 16000000Hz)
+__bitrate__: SPI bus port bitrate in _Hz_ (default value is set to 16MHz)
+
+__strip frame delimiters__: when specified this option remove frame delimiters (i.e. `F`, `EF` tags printed before and after the frame body) 
+
+__reset on startup__: force a module reset on application startup
 
 ### References
 

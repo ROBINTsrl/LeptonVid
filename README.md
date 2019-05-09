@@ -14,4 +14,4 @@ Usefult repositories with __Lepton 3__ module software (running on __Raspberry P
 
 
 Official __FLIR Lepton 3__ support resource page
-- https://www.flir.com/support/products/lepton#Resources
+3. https://www.flir.com/support/products/lepton#Resources

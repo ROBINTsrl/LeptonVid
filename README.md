@@ -1,11 +1,11 @@
 # LeptonVid
 ### FLIR Lepton 3 SPI / GPIO streaming console application
 
-This program is a very simple tool to retrieve frames/pictures from __FLIR Lepton 3__ modules and print them on standard output. 
+This program is a very simple tool to retrieve frames/pictures from __FLIR Lepton 3__ modules and print them on standard output.
 
 There are many tools like this over there but I found many of them to have very big frame syncronization issues that I've not been able to fix.
 
-This application was written for use on __RaspberryPi 0 W__ boards connecting the __Lepton 3 Module__ (with an adapter board) trough _SPI_ port. To achieve the maximum performances and avoid synchronization issues I'm using an extra _GPIO_ pin on which I received a VSYNC interrupt signal from the __Lepton 3__ module itself (see chapter [4.2.3.3.3 Frame Synchronization](https://www.flir.com/globalassets/imported-assets/document/flir-lepton-engineering-datasheet.pdf)).
+This application was written for use on __RaspberryPi 0 W__ boards connecting the __Lepton 3 Module__ (with an adapter/breakout board) trough _SPI_ port. To achieve the maximum performances and avoid synchronization issues I'm using an extra _GPIO_ pin on which I received a VSYNC interrupt signal from the __Lepton 3__ module itself (see chapter [4.2.3.3.3 Frame Synchronization](https://www.flir.com/globalassets/imported-assets/document/flir-lepton-engineering-datasheet.pdf)).
 
 As suggested by __Luke van Horn__ in [his project](https://github.com/lukevanhorn/Lepton3) is better to increase SPI device buffer size to increase overall performances (on __RPi0W__ boards)) adding `spidev.buffer=131072` to `/boot/cmdline.txt`
 
@@ -41,11 +41,13 @@ __gpio pin__: using this option to change the __Raspebbery Pi__ pin used to inpu
 
 ### Wirings
 
-As mentioned above this program requires __Raspberry Pi__ board to be connected to __Lepton module__ trough _SPI_ bus. Please refer to official __Raspberry Pi__ and __FLIR Lepton Module__ (or/and support board vendor) pinout before proceed on wiring. Please note also that two more connections are required to get the application working these are:
+As mentioned above this program requires __Raspberry Pi__ board to be connected to __Lepton module__ trough _SPI_ bus. Please refer to official __Raspberry Pi__ and __FLIR Lepton Module__ (or/and support/breakout board vendor) pinout before proceed on wiring. Please note also that two more connections are required to get the application working these are:
 - I2C bus
 - VSYNC connection
 
-I2C bus connection is required to enable commands to be issued to __Lepton Module__. VSYNC connection is needed to enter __Lepton module__ VSYNC output into one of __Raspberry Pi__ GPIO pin without this connection the frame synchronization will be impossibile and the application will fail. The default __Raspberry Pi__ pin expected to be connected is pin 22 (pin 6 in [WiringPi](https://pinout.xyz/pinout/wiringpi) sequence). Where to pick the VSYNC output on Lepton module depends on support board design. On official __FLIR__ support board this output is an exposed pad labeled __GPIO3__ placed on the back side of the board itself (yes you have to solder a wire on it).
+I2C bus connection is required to enable commands to be issued to __Lepton Module__. VSYNC connection is needed to enter __Lepton module__ VSYNC output into one of __Raspberry Pi__ GPIO pin without this connection the frame synchronization will be impossibile and the application will fail. The default __Raspberry Pi__ pin expected to be connected is pin 22 (pin 6 in [WiringPi](https://pinout.xyz/pinout/wiringpi) sequence). Where to pick the VSYNC output on Lepton module depends on support board design. On official __PURE Egingeering Lepton Breakout Board__ this output is an exposed pad labeled __GPIO3__ placed on the back side of the board itself (yes you have to solder a wire on it).
+
+
 
 ### References
 

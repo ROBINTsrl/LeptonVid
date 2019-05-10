@@ -50,6 +50,17 @@ If you are using __PURE Egingeering Lepton Breakout Board__ this output is an ex
 
 ![lepton_breakout_board (Back)](https://user-images.githubusercontent.com/6094578/57529094-54389a00-7334-11e9-8086-df99cd5f7ff1.jpg)
 
+### Advanced use
+
+I'm using this application to provide a stream of the image to a remote PC where is shown trough another simple application.
+The easiest way to do this (on __Raspberry Pi__ as on any other Linux environment) is to use `netcat` command in this way:
+
+```
+LeptonVid | nc -k -l 5002
+```
+
+Now connecting on the port 5002 of your __RPi__ board you can fetch the stream ad use it as you like.
+
 ### References
 
 Usefult repositories with __Lepton 3__ module software (running on __Raspberry Pi__):

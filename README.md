@@ -23,9 +23,9 @@ Once compiled the tool act as a typical _Unix_ console application; typing `Lept
 [-w gpio pin]
 ```
 
-__frames__: is the number of frames the application will wait from module, please note that only valid frames are taken into account. Omitting this option will cause LeptonVid to run forever until interrupted.
+__frames__: is the number of frames the application will retrieve from the module, please note that only valid frames are taken into account. Omitting this option will cause LeptonVid to run forever.
 
-__frames timeout__: allows to specify the timeout time in microseconds of the `ioctl()` read function (default value is set to 65535 microseconds).
+__frames timeout__: allows to specify the timeout time in microseconds of the `ioctl()` read function which gather the frame data from the module (default value is set to 65535 microseconds).
 
 __startup delay__: time to wait before interacting with camera module in seconds. Please note that official documentation states that the internal module initialization and calibration procedure will take not less than 5 seconds (default timeout value is 5 seconds).
 

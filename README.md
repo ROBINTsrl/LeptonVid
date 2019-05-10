@@ -50,6 +50,11 @@ If you are using __PURE Egingeering Lepton Breakout Board__ this output is an ex
 
 ![lepton_breakout_board (Back)](https://user-images.githubusercontent.com/6094578/57529094-54389a00-7334-11e9-8086-df99cd5f7ff1.jpg)
 
+### Build
+
+To create build this application simply clone this repo on your __Raspberry Pi board__ and run `make.sh`.
+Please note that this application need a fresh install of [WiringPi](http://wiringpi.com/) (I had several problems running it with _stock_ WiringPi found on Raspbian), if you notice some problem in running the application try reinstalling this library.
+
 ### Advanced use
 
 I'm using this application to provide a stream of the image to a remote PC where is shown trough another simple application.

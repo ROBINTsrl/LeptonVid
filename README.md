@@ -61,7 +61,7 @@ I'm using this application to provide a stream of the image to a remote PC where
 The easiest way to do this (on __Raspberry Pi__ as on any other Linux environment) is to use `netcat` command in this way:
 
 ```
-LeptonVid | nc -k -l 5002
+LeptonVid | nc -k -l -p 5002
 ```
 
 Now connecting on the port 5002 of your __RPi__ board you can fetch the stream ad use it as you like.

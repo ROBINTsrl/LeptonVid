@@ -52,7 +52,7 @@ If you are using __PURE Egingeering Lepton Breakout Board__ this output is an ex
 
 ### Build
 
-To create build this application simply clone this repo on your __Raspberry Pi board__ and run `make.sh`.
+To build this application binary simply clone this repo on your __Raspberry Pi board__ and run `make.sh`.
 Please note that this application need a fresh install of [WiringPi](http://wiringpi.com/) (I had several problems running it with _stock_ WiringPi found on Raspbian), if you notice some problem in running the application try reinstalling this library.
 
 ### Advanced use

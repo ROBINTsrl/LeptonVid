@@ -45,7 +45,7 @@ As mentioned above this program requires __Raspberry Pi__ board to be connected 
 - I2C bus
 - VSYNC connection
 
-I2C bus connection is required to enable commands to be issued to __Lepton Module__. VSYNC connection is needed to enter __Lepton module__ VSYNC output into one of __Raspberry Pi__ GPIO pin without this connection the frame synchronization will be impossibile and the application will fail. The default __Raspberry Pi__ pin expected to be connected is pin 22 (pin 6 in [WiringPi](https://pinout.xyz/pinout/wiringpi) sequence). Where to pick the VSYNC output on Lepton module depends on support board design. 
+I2C bus connection is required to enable commands to be issued to __Lepton Module__. VSYNC connection is needed to enter __Lepton module__ VSYNC output into one of __Raspberry Pi__ GPIO pin without this connection the frame synchronization will be impossibile and the application will fail. The default __Raspberry Pi__ pin expected to be connected is pin 22 / GPIO25 (pin 6 in [WiringPi](https://pinout.xyz/pinout/wiringpi) sequence). Where to pick the VSYNC output on Lepton module depends on support board design. 
 If you are using __PURE Egingeering Lepton Breakout Board__ this output is an exposed pad labeled __GPIO3__ placed on the back side of the board itself (yes you have to solder a wire on it).
 
 ![lepton_breakout_board (Back)](https://user-images.githubusercontent.com/6094578/57529094-54389a00-7334-11e9-8086-df99cd5f7ff1.jpg)

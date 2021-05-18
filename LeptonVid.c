@@ -13,12 +13,12 @@
 #include <errno.h>
 #include <wiringPi.h>
 
-#include "leptonSDKEmb32OEM/LEPTON_SDK.h"
-#include "leptonSDKEmb32OEM/LEPTON_SYS.h"
-#include "leptonSDKEmb32OEM/LEPTON_Types.h"
-#include "leptonSDKEmb32OEM/LEPTON_AGC.h"
-#include "leptonSDKEmb32OEM/LEPTON_OEM.h"
-#include "leptonSDKEmb32OEM/LEPTON_ErrorCodes.h"
+#include "leptonSDKEmb32PUB/LEPTON_SDK.h"
+#include "leptonSDKEmb32PUB/LEPTON_SYS.h"
+#include "leptonSDKEmb32PUB/LEPTON_Types.h"
+#include "leptonSDKEmb32PUB/LEPTON_AGC.h"
+#include "leptonSDKEmb32PUB/LEPTON_OEM.h"
+#include "leptonSDKEmb32PUB/LEPTON_ErrorCodes.h"
 
 #define REBOOT_LEPTON
 //#define POWER_CYCLE_LEPTON

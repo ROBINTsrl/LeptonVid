@@ -80,3 +80,11 @@ Groupgets campaigns:
 
 Raspberry resources:
 - https://pinout.xyz/
+
+#
+
+Live long and prosper!
+
+That's all folks.
+
+By[t]e{s} Weirdgyn
